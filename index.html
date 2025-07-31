@@ -17,3 +17,17 @@
   data-label="Translate"
   data-config='{"lang": "en"}'>
 </script>
+Optional: Customize Widget Container
+
+const widget = document.createElement("div");
+widget.style.cssText = `
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-family: sans-serif;
+`;
+widget.innerHTML = `<strong>Hello from Chat Widget</strong>`;
+document.currentScript.parentElement.appendChild(widget);
